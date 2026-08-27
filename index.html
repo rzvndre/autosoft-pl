@@ -1832,52 +1832,54 @@
        FOOTER
   ====================================================== -->
 
-  <footer class="site-footer">
+<footer class="site-footer">
+
+  <div class="container footer-inner">
+
+    <!-- BRAND -->
+
+    <button
+      class="brand brand-button"
+      type="button"
+      data-scroll-target="top"
+      aria-label="Przejdź na początek strony"
+    >
+
+      <span class="brand-mark">
+        C
+      </span>
+
+      <span>
+        CVSTech<span class="text-red">PL</span>
+      </span>
+
+    </button>
 
 
-    <div class="container footer-inner">
+    <!-- CENTER -->
+
+ <div class="footer-center">
+
+  <small>
+    © 2026 CVSTechPL.
+  </small>
+
+  <span id="policy-link-container"></span>
 
 
-      <button
-        class="brand brand-button"
-        type="button"
-        data-scroll-target="top"
-        aria-label="Przejdź na początek strony"
-      >
+    <!-- CTA -->
 
+    <button
+      class="footer-button"
+      type="button"
+      data-scroll-target="check-car"
+    >
+      Sprawdź auto →
+    </button>
 
-        <span class="brand-mark">
-          C
-        </span>
+  </div>
 
-
-        <span>
-          CVSTech<span class="text-red">PL</span>
-        </span>
-
-
-      </button>
-
-
-      <small>
-        © 2026 CVSTechPL.
-      </small>
-
-
-      <button
-        class="footer-button"
-        type="button"
-        data-scroll-target="check-car"
-      >
-        Sprawdź auto →
-      </button>
-
-
-    </div>
-
-
-  </footer>
-
+</footer>
 
   <!-- =====================================================
        MOBILE CTA
@@ -2239,9 +2241,368 @@
 
 
     }
+const policyLinkContainer =
+  document.getElementById("policy-link-container");
 
+if (policyLinkContainer) {
+
+  const policyLink =
+    document.createElement("a");
+
+  policyLink.href = "policy/";
+  policyLink.className = "footer-policy";
+  policyLink.textContent = "Polityka prywatności";
+
+  policyLinkContainer.appendChild(policyLink);
+
+
+}
+/*
+ * =====================================================
+ * COOKIE PRIVACY POLICY LINK
+ * =====================================================
+ */
+
+const cookiePolicyLinkContainer =
+  document.getElementById(
+    "cookie-policy-link-container"
+  );
+
+
+if (cookiePolicyLinkContainer) {
+
+
+  const cookiePolicyLink =
+    document.createElement(
+      "a"
+    );
+
+
+  cookiePolicyLink.href =
+    "policy/";
+
+
+  cookiePolicyLink.className =
+    "cookie-policy-link";
+
+
+  cookiePolicyLink.textContent =
+    "Polityka prywatności i cookies";
+
+
+  cookiePolicyLinkContainer.appendChild(
+    cookiePolicyLink
+  );
+
+
+}
+/*
+ * =====================================================
+ * COOKIE MODAL POLICY LINK
+ * =====================================================
+ */
+
+const cookieModalPolicyLinkContainer =
+  document.getElementById(
+    "cookie-modal-policy-link-container"
+  );
+
+
+if (cookieModalPolicyLinkContainer) {
+
+  const cookieModalPolicyLink =
+    document.createElement("a");
+
+  cookieModalPolicyLink.href =
+    "policy/";
+
+  cookieModalPolicyLink.className =
+    "cookie-policy-link";
+
+  cookieModalPolicyLink.textContent =
+    "Polityka prywatności i cookies";
+
+  cookieModalPolicyLinkContainer.appendChild(
+    cookieModalPolicyLink
+  );
+
+}
   </script>
 
+<!-- =====================================================
+     COOKIE CONSENT
+====================================================== -->
+
+<div
+  class="cookie-banner"
+  id="cookie-banner"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-title"
+  aria-describedby="cookie-description"
+  hidden
+>
+
+  <div class="cookie-banner-inner">
+
+    <div class="cookie-icon" aria-hidden="true">
+      C
+    </div>
+
+    <div class="cookie-content">
+
+      <h2 id="cookie-title">
+        Prywatność i pliki cookies
+      </h2>
+
+      <p id="cookie-description">
+        Używamy plików cookies i podobnych technologii,
+        aby zapewnić prawidłowe działanie strony,
+        analizować ruch oraz ulepszać nasze usługi.
+        Możesz zaakceptować wszystkie opcjonalne
+        technologie, odrzucić je lub dostosować
+        swoje preferencje.
+      </p>
+
+      <span id="cookie-policy-link-container"></span>
+
+    </div>
+
+    <div class="cookie-actions">
+
+      <button
+        class="cookie-button cookie-button-settings"
+        id="cookie-settings"
+        type="button"
+      >
+        Ustawienia
+      </button>
+
+      <button
+        class="cookie-button cookie-button-reject"
+        id="cookie-reject"
+        type="button"
+      >
+        Odrzuć
+      </button>
+
+      <button
+        class="cookie-button cookie-button-accept"
+        id="cookie-accept"
+        type="button"
+      >
+        Akceptuję
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     COOKIE SETTINGS
+====================================================== -->
+
+<div
+  class="cookie-modal"
+  id="cookie-modal"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cookie-settings-title"
+  hidden
+>
+
+  <div class="cookie-modal-backdrop"></div>
+
+  <div class="cookie-modal-card">
+
+    <div class="cookie-modal-header">
+
+      <div>
+
+        <span class="cookie-modal-label">
+          CVSTechPL
+        </span>
+
+        <h2 id="cookie-settings-title">
+          Ustawienia prywatności
+        </h2>
+
+      </div>
+
+      <button
+        class="cookie-modal-close"
+        id="cookie-modal-close"
+        type="button"
+        aria-label="Zamknij ustawienia cookies"
+      >
+        ×
+      </button>
+
+    </div>
+
+
+    <p class="cookie-modal-intro">
+      Wybierz, na jakie rodzaje plików cookies
+      i podobnych technologii wyrażasz zgodę.
+      Niezbędne technologie są wymagane
+      do prawidłowego działania strony.
+    </p>
+
+
+    <!-- NECESSARY -->
+
+    <div class="cookie-category">
+
+      <div class="cookie-category-content">
+
+        <div class="cookie-category-title">
+
+          <strong>
+            Niezbędne
+          </strong>
+
+          <span class="cookie-always-active">
+            Zawsze aktywne
+          </span>
+
+        </div>
+
+        <p>
+          Technologie wymagane do działania strony
+          oraz zapisania wybranych ustawień prywatności.
+        </p>
+
+      </div>
+
+      <label
+        class="cookie-switch cookie-switch-disabled"
+        aria-label="Niezbędne cookies są zawsze aktywne"
+      >
+
+        <input
+          type="checkbox"
+          checked
+          disabled
+        >
+
+        <span class="cookie-slider"></span>
+
+      </label>
+
+    </div>
+
+
+    <!-- ANALYTICS -->
+
+    <div class="cookie-category">
+
+      <div class="cookie-category-content">
+
+        <div class="cookie-category-title">
+
+          <strong>
+            Analityczne
+          </strong>
+
+        </div>
+
+        <p>
+          Pomagają nam zrozumieć,
+          w jaki sposób użytkownicy korzystają
+          ze strony i które jej elementy
+          można ulepszyć.
+        </p>
+
+      </div>
+
+      <label
+        class="cookie-switch"
+        aria-label="Cookies analityczne"
+      >
+
+        <input
+          id="cookie-analytics"
+          type="checkbox"
+        >
+
+        <span class="cookie-slider"></span>
+
+      </label>
+
+    </div>
+
+
+    <!-- MARKETING -->
+
+    <div class="cookie-category">
+
+      <div class="cookie-category-content">
+
+        <div class="cookie-category-title">
+
+          <strong>
+            Marketingowe
+          </strong>
+
+        </div>
+
+        <p>
+          Mogą być wykorzystywane
+          do pomiaru skuteczności reklam
+          oraz dostosowania komunikacji marketingowej.
+        </p>
+
+      </div>
+
+      <label
+        class="cookie-switch"
+        aria-label="Cookies marketingowe"
+      >
+
+        <input
+          id="cookie-marketing"
+          type="checkbox"
+        >
+
+        <span class="cookie-slider"></span>
+
+      </label>
+
+    </div>
+
+
+    <div class="cookie-modal-footer">
+
+        <span id="cookie-modal-policy-link-container"></span>
+
+      <div class="cookie-modal-actions">
+
+        <button
+          class="cookie-button cookie-button-reject"
+          id="cookie-modal-reject"
+          type="button"
+        >
+          Odrzuć wszystkie
+        </button>
+
+        <button
+          class="cookie-button cookie-button-accept"
+          id="cookie-save"
+          type="button"
+        >
+          Zapisz ustawienia
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
 </body>
 

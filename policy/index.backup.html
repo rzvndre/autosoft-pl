@@ -1,0 +1,1789 @@
+<!doctype html>
+<html lang="pl">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Polityka prywatności i plików cookies CVSTechPL."
+  >
+
+  <title>Polityka prywatności | CVSTechPL</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+
+  <style>
+
+    :root {
+      --red: #e52329;
+      --red-dark: #c81920;
+      --black: #111315;
+      --graphite: #292d32;
+      --muted: #676c73;
+      --light: #f5f6f7;
+      --border: #e7e9ec;
+      --white: #ffffff;
+      --container: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+
+      background: var(--white);
+      color: var(--black);
+
+      font-family:
+        "Manrope",
+        Arial,
+        sans-serif;
+
+      line-height: 1.7;
+    }
+
+    .container {
+      width: min(
+        var(--container),
+        calc(100% - 40px)
+      );
+
+      margin-inline: auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .header {
+      position: sticky;
+      z-index: 1000;
+      top: 0;
+
+      border-bottom: 1px solid var(--border);
+
+      background: rgba(255, 255, 255, 0.96);
+
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      display: flex;
+
+      min-height: 76px;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 11px;
+
+      color: var(--black);
+
+      font-size: 19px;
+      font-weight: 800;
+
+      letter-spacing: -0.04em;
+
+      text-decoration: none;
+    }
+
+    .brand-box {
+      display: grid;
+
+      width: 37px;
+      height: 37px;
+
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: var(--red);
+      color: var(--white);
+
+      font-size: 16px;
+      font-weight: 700;
+
+      box-shadow:
+        0 8px 22px rgba(229, 35, 41, 0.22);
+    }
+
+    .red {
+      color: var(--red);
+    }
+
+    .home-btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      gap: 8px;
+
+      min-height: 43px;
+
+      padding: 10px 18px;
+
+      border: 1px solid var(--red);
+
+      border-radius: 10px;
+
+      background: var(--red);
+      color: var(--white);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      text-decoration: none;
+
+      box-shadow:
+        0 8px 24px rgba(229, 35, 41, 0.18);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .home-btn:hover {
+      background: var(--red-dark);
+
+      transform: translateY(-2px);
+
+      box-shadow:
+        0 12px 28px rgba(229, 35, 41, 0.25);
+    }
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      position: relative;
+
+      overflow: hidden;
+
+      padding: 100px 0 95px;
+
+      background: #17191c;
+      color: var(--white);
+    }
+
+    .hero::before {
+      position: absolute;
+
+      width: 720px;
+      height: 720px;
+
+      top: -370px;
+      right: -280px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+      border-radius: 50%;
+
+      content: "";
+    }
+
+    .hero::after {
+      position: absolute;
+
+      width: 550px;
+      height: 550px;
+
+      right: 0;
+      bottom: -430px;
+
+      border:
+        1px solid rgba(255, 255, 255, 0.05);
+
+      border-radius: 50%;
+
+      content: "";
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      margin: 0 0 17px;
+
+      color: #bcc0c5;
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 0.15em;
+
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      max-width: 820px;
+
+      margin: 0 0 24px;
+
+      color: var(--white);
+
+      font-size: clamp(46px, 6vw, 74px);
+      font-weight: 800;
+
+      line-height: 0.98;
+
+      letter-spacing: -0.055em;
+    }
+
+    .hero-text {
+      max-width: 680px;
+
+      margin: 0;
+
+      color: rgba(255, 255, 255, 0.68);
+
+      font-size: 15px;
+
+      line-height: 1.8;
+    }
+
+
+    /* =========================
+       MAIN
+    ========================= */
+
+    .policy-main {
+      padding: 80px 0 110px;
+    }
+
+    .policy-layout {
+      display: grid;
+
+      grid-template-columns:
+        245px minmax(0, 1fr);
+
+      gap: 75px;
+
+      align-items: start;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    .policy-nav {
+      position: sticky;
+      top: 110px;
+    }
+
+    .nav-title {
+      display: block;
+
+      margin: 0 0 15px 11px;
+
+      color: #8b8f95;
+
+      font-size: 10px;
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+    }
+
+    .policy-nav a {
+      display: flex;
+
+      align-items: center;
+
+      margin-bottom: 3px;
+
+      padding: 9px 11px;
+
+      border-radius: 8px;
+
+      color: var(--muted);
+
+      font-size: 12px;
+      font-weight: 600;
+
+      text-decoration: none;
+
+      transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .policy-nav a:hover {
+      background: rgba(229, 35, 41, 0.065);
+
+      color: var(--red);
+
+      transform: translateX(4px);
+    }
+
+
+    /* =========================
+       CONTENT
+    ========================= */
+
+    .policy-content {
+      min-width: 0;
+    }
+
+    .policy-section {
+      margin-bottom: 48px;
+
+      padding-bottom: 48px;
+
+      border-bottom:
+        1px solid var(--border);
+
+      scroll-margin-top: 115px;
+    }
+
+    .policy-section:last-child {
+      margin-bottom: 0;
+
+      border-bottom: none;
+    }
+
+    .section-num {
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: var(--red);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      letter-spacing: 0.12em;
+    }
+
+    .policy-section h2 {
+      margin: 0 0 20px;
+
+      color: var(--black);
+
+      font-size: clamp(28px, 3vw, 38px);
+
+      line-height: 1.15;
+
+      letter-spacing: -0.045em;
+    }
+
+    .policy-section h3 {
+      margin: 28px 0 10px;
+
+      color: var(--black);
+
+      font-size: 16px;
+
+      letter-spacing: -0.02em;
+    }
+
+    .policy-section p {
+      margin: 0 0 16px;
+
+      color: var(--muted);
+
+      font-size: 14px;
+
+      line-height: 1.8;
+    }
+
+    .policy-section ul {
+      margin: 17px 0 22px;
+
+      padding-left: 22px;
+
+      color: var(--muted);
+    }
+
+    .policy-section li {
+      margin-bottom: 8px;
+
+      font-size: 14px;
+
+      line-height: 1.7;
+    }
+
+    .policy-section strong {
+      color: var(--black);
+    }
+
+    .text-link {
+      color: var(--red);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .text-link:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       FORM / INFO CARDS
+    ========================= */
+
+    .info-card {
+      margin: 23px 0;
+
+      padding: 23px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: var(--light);
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+
+    /* =========================
+       COOKIES
+    ========================= */
+
+    .cookie-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+      gap: 14px;
+
+      margin: 25px 0;
+    }
+
+    .cookie-card {
+      padding: 20px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: var(--white);
+    }
+
+    .cookie-head {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 10px;
+
+      margin-bottom: 11px;
+    }
+
+    .cookie-head strong {
+      font-size: 13px;
+    }
+
+    .cookie-card p {
+      margin: 0;
+
+      font-size: 12px;
+
+      line-height: 1.7;
+    }
+
+    .badge {
+      padding: 4px 7px;
+
+      border-radius: 999px;
+
+      white-space: nowrap;
+
+      font-size: 8px;
+      font-weight: 800;
+
+      letter-spacing: 0.04em;
+
+      text-transform: uppercase;
+    }
+
+    .badge-green {
+      background: rgba(18, 128, 77, 0.09);
+
+      color: #177245;
+    }
+
+    .badge-red {
+      background: rgba(229, 35, 41, 0.08);
+
+      color: var(--red);
+    }
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 14px;
+
+      margin-top: 24px;
+    }
+
+    .contact-card {
+      padding: 22px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 14px;
+
+      background: var(--light);
+    }
+
+    .contact-label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: #8a8f95;
+
+      font-size: 9px;
+      font-weight: 800;
+
+      letter-spacing: 0.13em;
+
+      text-transform: uppercase;
+    }
+
+    .contact-card a {
+      color: var(--black);
+
+      font-size: 13px;
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .contact-card a:hover {
+      color: var(--red);
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    .footer {
+      padding: 34px 0;
+
+      border-top: 1px solid var(--border);
+
+      background: var(--light);
+    }
+
+    .footer-inner {
+      display: flex;
+
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 24px;
+    }
+
+    .footer-copy {
+      color: #8b8f95;
+
+      font-size: 11px;
+    }
+
+    .footer-btn {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 10px 15px;
+
+      border: 1px solid var(--border);
+
+      border-radius: 8px;
+
+      background: var(--white);
+      color: var(--black);
+
+      font-size: 11px;
+      font-weight: 800;
+
+      text-decoration: none;
+
+      transition:
+        border-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .footer-btn:hover {
+      border-color: var(--red);
+
+      color: var(--red);
+
+      transform: translateY(-1px);
+    }
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 900px) {
+
+      .policy-layout {
+        grid-template-columns: 1fr;
+
+        gap: 42px;
+      }
+
+      .policy-nav {
+        position: static;
+
+        display: flex;
+
+        flex-wrap: wrap;
+
+        gap: 4px;
+
+        padding-bottom: 25px;
+
+        border-bottom: 1px solid var(--border);
+      }
+
+      .nav-title {
+        width: 100%;
+      }
+
+      .policy-nav a {
+        display: inline-flex;
+      }
+
+      .cookie-grid {
+        grid-template-columns: 1fr;
+      }
+
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .header-inner {
+        min-height: 68px;
+      }
+
+      .brand {
+        font-size: 16px;
+      }
+
+      .brand-box {
+        width: 33px;
+        height: 33px;
+
+        font-size: 14px;
+      }
+
+      .home-btn {
+        min-height: 39px;
+
+        padding: 8px 12px;
+
+        font-size: 10px;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero-text {
+        font-size: 13px;
+      }
+
+      .policy-main {
+        padding: 55px 0 80px;
+      }
+
+      .policy-nav a {
+        padding: 7px 9px;
+
+        font-size: 10px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+
+        flex-direction: column;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="header">
+
+    <div class="container header-inner">
+
+      ../
+
+        <span class="brand-box">
+          C
+        </span>
+
+        <span>
+          CVSTech<span class="red">PL</span>
+        </span>
+
+      </a>
+
+
+      ../
+        ← Strona główna
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <main>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+      <div class="container hero-content">
+
+        <p class="eyebrow">
+          CVSTechPL / Prywatność
+        </p>
+
+        <h1>
+          Polityka
+          <span class="red">prywatności.</span>
+        </h1>
+
+        <p class="hero-text">
+
+          Informacje dotyczące prywatności,
+          przetwarzania danych, formularza
+          kontaktowego oraz plików cookies
+          w serwisie CVSTechPL.
+
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         POLICY
+    ========================== -->
+
+    <section class="policy-main">
+
+      <div class="container policy-layout">
+
+
+        <!-- =====================
+             NAV
+        ====================== -->
+
+        <nav
+          class="policy-nav"
+          aria-label="Spis treści polityki prywatności"
+        >
+
+          <span class="nav-title">
+            Spis treści
+          </span>
+
+          #general
+            Informacje ogólne
+          </a>
+
+          #definitions
+            Definicje
+          </a>
+
+          #data
+            Dane osobowe
+          </a>
+
+          #form
+            Formularz kontaktowy
+          </a>
+
+          #use
+            Wykorzystanie danych
+          </a>
+
+          #cookies
+            Pliki cookies
+          </a>
+
+          #retention
+            Przechowywanie danych
+          </a>
+
+          #transfer
+            Przekazywanie danych
+          </a>
+
+          #security
+            Bezpieczeństwo
+          </a>
+
+          #providers
+            Usługodawcy
+          </a>
+
+          #rights
+            Prawa użytkownika
+          </a>
+
+          #links
+            Linki zewnętrzne
+          </a>
+
+          #changes
+            Zmiany polityki
+          </a>
+
+          #contact
+            Kontakt
+          </a>
+
+        </nav>
+
+
+        <!-- =====================
+             CONTENT
+        ====================== -->
+
+        <div class="policy-content">
+
+
+          <!-- 01 -->
+
+          <section
+            class="policy-section"
+            id="general"
+          >
+
+            <span class="section-num">
+              01
+            </span>
+
+            <h2>
+              Informacje ogólne
+            </h2>
+
+            <p>
+
+              Prywatność użytkowników jest
+              dla CVSTechPL istotna.
+              Niniejsza Polityka opisuje zasady
+              dotyczące informacji przetwarzanych
+              w związku z korzystaniem
+              z serwisu CVSTechPL.
+
+            </p>
+
+            <p>
+
+              Polityka dotyczy strony internetowej
+
+              ../
+                cvstech.eu
+              </a>
+
+              oraz funkcjonalności dostępnych
+              za jej pośrednictwem.
+
+            </p>
+
+            <p>
+
+              Informacje przekazywane
+              przez użytkownika mogą być
+              wykorzystywane w zakresie
+              związanym z funkcjonowaniem
+              serwisu, obsługą zapytań
+              oraz oferowanymi usługami.
+
+            </p>
+
+          </section>
+
+
+          <!-- 02 -->
+
+          <section
+            class="policy-section"
+            id="definitions"
+          >
+
+            <span class="section-num">
+              02
+            </span>
+
+            <h2>
+              Definicje
+            </h2>
+
+            <p>
+
+              <strong>Użytkownik</strong>
+              oznacza osobę odwiedzającą
+              lub korzystającą
+              ze strony CVSTechPL.
+
+            </p>
+
+            <p>
+
+              <strong>Serwis / Strona</strong>
+              oznacza serwis internetowy
+              CVSTechPL dostępny pod adresem
+
+              ../
+                cvstech.eu
+              </a>.
+
+            </p>
+
+            <p>
+
+              <strong>Dane osobowe</strong>
+              oznaczają informacje odnoszące się
+              do zidentyfikowanej lub możliwej
+              do zidentyfikowania osoby fizycznej.
+
+            </p>
+
+            <p>
+
+              <strong>Usługodawca</strong>
+              oznacza zewnętrzny podmiot,
+              którego rozwiązania są
+              wykorzystywane do technicznego
+              funkcjonowania Serwisu
+              lub obsługi jego funkcji.
+
+            </p>
+
+            <p>
+
+              <strong>Cookies</strong>
+              oznaczają pliki lub podobne
+              technologie, które mogą umożliwiać
+              przechowywanie lub odczytywanie
+              informacji na urządzeniu użytkownika.
+
+            </p>
+
+          </section>
+
+
+          <!-- 03 -->
+
+          <section
+            class="policy-section"
+            id="data"
+          >
+
+            <span class="section-num">
+              03
+            </span>
+
+            <h2>
+              Dane osobowe
+            </h2>
+
+            <p>
+
+              Użytkownik może przeglądać
+              podstawową zawartość strony
+              bez przesyłania danych
+              za pomocą formularza kontaktowego.
+
+            </p>
+
+            <p>
+
+              W przypadku skorzystania
+              z formularza CVSTechPL użytkownik
+              może przekazać między innymi:
+
+            </p>
+
+            <ul>
+
+              <li>
+                adres e-mail,
+              </li>
+
+              <li>
+                numer telefonu,
+              </li>
+
+              <li>
+                markę samochodu,
+              </li>
+
+              <li>
+                model samochodu,
+              </li>
+
+              <li>
+                rok produkcji samochodu,
+              </li>
+
+              <li>
+                wybrany zakres usług,
+              </li>
+
+              <li>
+                treść komentarza
+                lub dodatkowego zapytania.
+              </li>
+
+            </ul>
+
+            <p>
+
+              Użytkownik powinien przekazywać
+              wyłącznie informacje potrzebne
+              do obsługi konkretnego zapytania.
+
+            </p>
+
+          </section>
+
+
+          <!-- 04 -->
+
+          <section
+            class="policy-section"
+            id="form"
+          >
+
+            <span class="section-num">
+              04
+            </span>
+
+            <h2>
+              Formularz kontaktowy
+            </h2>
+
+            <p>
+
+              Formularz CVSTechPL umożliwia
+              przesłanie informacji dotyczących
+              pojazdu oraz usług, którymi
+              zainteresowany jest użytkownik.
+
+            </p>
+
+            <p>
+
+              Dane zostają przesłane
+              po wykonaniu przez użytkownika
+              czynności polegającej
+              na wysłaniu formularza.
+
+            </p>
+
+            <div class="info-card">
+
+              <h3>
+                Formspree
+              </h3>
+
+              <p>
+
+                Do technicznej obsługi
+                formularza kontaktowego
+                CVSTechPL korzysta obecnie
+                z usługi Formspree.
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+          <!-- 05 -->
+
+          <section
+            class="policy-section"
+            id="use"
+          >
+
+            <span class="section-num">
+              05
+            </span>
+
+            <h2>
+              Wykorzystanie danych
+            </h2>
+
+            <p>
+
+              Dane przekazane przez użytkownika
+              mogą być wykorzystywane
+              w zakresie potrzebnym do:
+
+            </p>
+
+            <ul>
+
+              <li>
+                odebrania i obsługi zapytania,
+              </li>
+
+              <li>
+                kontaktu z użytkownikiem,
+              </li>
+
+              <li>
+                udzielenia odpowiedzi,
+              </li>
+
+              <li>
+                analizy informacji dotyczących
+                wskazanego pojazdu,
+              </li>
+
+              <li>
+                określenia możliwego
+                zakresu usług,
+              </li>
+
+              <li>
+                prowadzenia dalszej komunikacji
+                związanej z przesłanym zapytaniem.
+              </li>
+
+            </ul>
+
+          </section>
+
+
+          <!-- 06 -->
+
+          <section
+            class="policy-section"
+            id="cookies"
+          >
+
+            <span class="section-num">
+              06
+            </span>
+
+            <h2>
+              Pliki cookies
+            </h2>
+
+            <p>
+
+              CVSTechPL może wykorzystywać
+              cookies oraz podobne technologie
+              związane z funkcjonowaniem strony
+              i ustawieniami użytkownika.
+
+            </p>
+
+
+            <div class="cookie-grid">
+
+
+              <article class="cookie-card">
+
+                <div class="cookie-head">
+
+                  <strong>
+                    Niezbędne
+                  </strong>
+
+                  <span class="badge badge-green">
+                    Zawsze aktywne
+                  </span>
+
+                </div>
+
+                <p>
+
+                  Technologie potrzebne
+                  do podstawowego działania strony
+                  oraz zapamiętania odpowiednich
+                  ustawień serwisu.
+
+                </p>
+
+              </article>
+
+
+              <article class="cookie-card">
+
+                <div class="cookie-head">
+
+                  <strong>
+                    Analityczne
+                  </strong>
+
+                  <span class="badge badge-red">
+                    Opcjonalne
+                  </span>
+
+                </div>
+
+                <p>
+
+                  Technologie analityczne mogą
+                  służyć do analizy sposobu
+                  korzystania ze strony,
+                  jeżeli zostaną wdrożone.
+
+                </p>
+
+              </article>
+
+
+              <article class="cookie-card">
+
+                <div class="cookie-head">
+
+                  <strong>
+                    Marketingowe
+                  </strong>
+
+                  <span class="badge badge-red">
+                    Opcjonalne
+                  </span>
+
+                </div>
+
+                <p>
+
+                  Technologie marketingowe mogą
+                  służyć do pomiaru działań
+                  marketingowych, jeżeli zostaną
+                  wdrożone.
+
+                </p>
+
+              </article>
+
+
+            </div>
+
+          </section>
+
+
+          <!-- 07 -->
+
+          <section
+            class="policy-section"
+            id="retention"
+          >
+
+            <span class="section-num">
+              07
+            </span>
+
+            <h2>
+              Przechowywanie danych
+            </h2>
+
+            <p>
+
+              Dane powinny być przechowywane
+              przez okres niezbędny do realizacji
+              celu, dla którego zostały przekazane,
+              oraz w zakresie wynikającym
+              z mających zastosowanie
+              obowiązków prawnych.
+
+            </p>
+
+          </section>
+
+
+          <!-- 08 -->
+
+          <section
+            class="policy-section"
+            id="transfer"
+          >
+
+            <span class="section-num">
+              08
+            </span>
+
+            <h2>
+              Przekazywanie danych
+            </h2>
+
+            <p>
+
+              W związku z korzystaniem
+              z zewnętrznych usług technicznych
+              informacje mogą być przetwarzane
+              przy wykorzystaniu infrastruktury
+              takich usługodawców.
+
+            </p>
+
+            <p>
+
+              Zakres takiego przetwarzania
+              zależy od usług rzeczywiście
+              wykorzystywanych przez CVSTechPL.
+
+            </p>
+
+          </section>
+
+
+          <!-- 09 -->
+
+          <section
+            class="policy-section"
+            id="security"
+          >
+
+            <span class="section-num">
+              09
+            </span>
+
+            <h2>
+              Bezpieczeństwo danych
+            </h2>
+
+            <p>
+
+              Bezpieczeństwo informacji
+              przekazywanych przez użytkowników
+              jest istotnym elementem
+              działania CVSTechPL.
+
+            </p>
+
+            <p>
+
+              Stosowane środki ochrony danych
+              powinny odpowiadać charakterowi
+              i zakresowi przetwarzanych
+              informacji oraz związanym
+              z tym ryzykom.
+
+            </p>
+
+          </section>
+
+
+          <!-- 10 -->
+
+          <section
+            class="policy-section"
+            id="providers"
+          >
+
+            <span class="section-num">
+              10
+            </span>
+
+            <h2>
+              Usługodawcy
+            </h2>
+
+            <p>
+
+              CVSTechPL korzysta
+              lub może korzystać z zewnętrznych
+              usług potrzebnych do technicznego
+              działania strony
+              i jej funkcjonalności.
+
+            </p>
+
+            <div class="info-card">
+
+              <h3>
+                Formspree
+              </h3>
+
+              <p>
+
+                Formspree jest obecnie
+                wykorzystywany przez CVSTechPL
+                do technicznej obsługi
+                formularza kontaktowego.
+
+              </p>
+
+            </div>
+
+            <p>
+
+              Zewnętrzni usługodawcy mogą
+              posiadać własne dokumenty
+              dotyczące ochrony prywatności
+              i korzystania z ich usług.
+
+            </p>
+
+          </section>
+
+
+          <!-- 11 -->
+
+          <section
+            class="policy-section"
+            id="rights"
+          >
+
+            <span class="section-num">
+              11
+            </span>
+
+            <h2>
+              Prawa użytkownika
+            </h2>
+
+            <p>
+
+              W zakresie przewidzianym
+              przez obowiązujące przepisy,
+              osobie, której dane dotyczą,
+              mogą przysługiwać odpowiednie
+              prawa związane
+              z przetwarzaniem danych.
+
+            </p>
+
+            <ul>
+
+              <li>
+                dostęp do danych,
+              </li>
+
+              <li>
+                sprostowanie danych,
+              </li>
+
+              <li>
+                żądanie usunięcia danych,
+              </li>
+
+              <li>
+                ograniczenie przetwarzania,
+              </li>
+
+              <li>
+                wniesienie sprzeciwu,
+                jeżeli ma zastosowanie,
+              </li>
+
+              <li>
+                przenoszenie danych,
+                jeżeli ma zastosowanie,
+              </li>
+
+              <li>
+                wycofanie zgody,
+                jeżeli zgoda stanowi
+                podstawę danego przetwarzania,
+              </li>
+
+              <li>
+                wniesienie skargi
+                do właściwego organu nadzorczego.
+              </li>
+
+            </ul>
+
+          </section>
+
+
+          <!-- 12 -->
+
+          <section
+            class="policy-section"
+            id="links"
+          >
+
+            <span class="section-num">
+              12
+            </span>
+
+            <h2>
+              Linki do innych stron
+            </h2>
+
+            <p>
+
+              Strona CVSTechPL może zawierać
+              linki prowadzące do zewnętrznych
+              stron internetowych lub usług.
+
+            </p>
+
+            <p>
+
+              Zewnętrzne serwisy mogą posiadać
+              własne zasady dotyczące prywatności
+              i przetwarzania informacji.
+
+            </p>
+
+          </section>
+
+
+          <!-- 13 -->
+
+          <section
+            class="policy-section"
+            id="changes"
+          >
+
+            <span class="section-num">
+              13
+            </span>
+
+            <h2>
+              Zmiany Polityki prywatności
+            </h2>
+
+            <p>
+
+              Niniejsza Polityka może być
+              aktualizowana w przypadku zmian
+              funkcjonalności strony,
+              sposobu przetwarzania danych
+              lub wykorzystywanych usług
+              i technologii.
+
+            </p>
+
+            <p>
+
+              Aktualna wersja Polityki
+              jest dostępna na stronie
+
+              ./
+                cvstech.eu/policy
+              </a>.
+
+            </p>
+
+          </section>
+
+
+          <!-- 14 -->
+
+          <section
+            class="policy-section"
+            id="contact"
+          >
+
+            <span class="section-num">
+              14
+            </span>
+
+            <h2>
+              Kontakt
+            </h2>
+
+            <p>
+
+              W przypadku pytań dotyczących
+              niniejszej Polityki, prywatności
+              lub danych można skontaktować się
+              z CVSTechPL.
+
+            </p>
+
+
+            <div class="contact-grid">
+
+
+              <div class="contact-card">
+
+                <span class="contact-label">
+                  E-mail
+                </span>
+
+                <a href="mailto:a.morozov@a3cloud.org">
+                  a.morozov@a3cloud.org
+                </a>
+
+              </div>
+
+
+              <div class="contact-card">
+
+                <span class="contact-label">
+                  Strona internetowa
+                </span>
+
+                ../
+                  cvstech.eu
+                </a>
+
+              </div>
+
+
+            </div>
+
+
+            <div class="info-card">
+
+              <p>
+
+                Dane identyfikacyjne administratora
+                danych należy uzupełnić zgodnie
+                z podmiotem prowadzącym działalność
+                CVSTechPL.
+
+              </p>
+
+            </div>
+
+          </section>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="footer">
+
+    <div class="container footer-inner">
+
+
+      ../
+
+        <span class="brand-box">
+          C
+        </span>
+
+        <span>
+          CVSTech<span class="red">PL</span>
+        </span>
+
+      </a>
+
+
+      <span class="footer-copy">
+        © 2026 CVSTechPL. Wszystkie prawa zastrzeżone.
+      </span>
+
+
+      ../
+        Strona główna →
+      </a>
+
+
+    </div>
+
+  </footer>
+
+
+</body>
+
+</html>
