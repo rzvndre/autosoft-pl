@@ -56,7 +56,8 @@ a {
 
 button,
 input,
-select {
+select,
+textarea {
   font: inherit;
 }
 
@@ -223,13 +224,24 @@ h3 {
     0 10px 26px
     rgba(229, 35, 41, 0.2);
 
-  transition: 0.22s ease;
+  transition:
+    background-color 0.22s ease,
+    transform 0.22s ease,
+    opacity 0.22s ease;
 }
 
 .button:hover {
   background: var(--red-hover);
 
   transform: translateY(-2px);
+}
+
+.button:disabled {
+  opacity: 0.7;
+
+  cursor: wait;
+
+  transform: none;
 }
 
 .button-secondary {
@@ -1042,26 +1054,51 @@ h3 {
   color: #abb0b6;
 }
 
+
+/* =========================================================
+   GEELY EX5 PHOTO - CHECK CAR SECTION
+========================================================= */
+
 .car-photo {
-  height: 210px;
-
-  margin:
-    34px 0 0;
-
   overflow: hidden;
+
+  width: 100%;
+
+  margin: 34px 0 0;
 
   border-radius: 20px;
 
   background: #2a2d31;
 }
 
-.car-photo img {
+.car-photo.car-photo-geely {
+  position: relative;
+
+  display: block;
+
   width: 100%;
-  height: 100%;
+  height: auto;
 
-  object-fit: cover;
+  aspect-ratio: 12 / 5;
 
-  opacity: 0.78;
+  margin: 32px 0 0;
+
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background-color: #292d31;
+
+  background-image:
+    url("https://geely.am/assets/images/c9/c97eac_EX5-model-selection---PC.jpg");
+
+  background-repeat: no-repeat;
+
+  background-position: center center;
+
+  background-size: cover;
+
+  box-shadow: none;
 }
 
 
@@ -1110,7 +1147,8 @@ h3 {
 }
 
 .lead-form input,
-.lead-form select {
+.lead-form select,
+.lead-form textarea {
   width: 100%;
 
   padding: 14px;
@@ -1125,13 +1163,37 @@ h3 {
 
   background: #fafafa;
 
+  color: var(--ink);
+
+  font-family: inherit;
   font-size: 14px;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.lead-form textarea {
+  min-height: 50px;
+
+  line-height: 1.5;
+
+  resize: vertical;
+}
+
+.lead-form input::placeholder,
+.lead-form textarea::placeholder {
+  color: #9a9fa5;
 }
 
 .lead-form input:focus,
-.lead-form select:focus {
+.lead-form select:focus,
+.lead-form textarea:focus {
   border-color:
     var(--red);
+
+  background: var(--white);
 
   box-shadow:
     0 0 0 3px
@@ -1179,6 +1241,18 @@ fieldset.form-full {
   font-weight: 700;
 
   cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.checkboxes label:hover {
+  border-color:
+    rgba(229, 35, 41, 0.35);
+
+  background:
+    rgba(229, 35, 41, 0.03);
 }
 
 .checkboxes input {
@@ -1197,20 +1271,69 @@ fieldset.form-full {
   font-size: 11px;
 }
 
-.form-success {
-  display: none;
 
-  margin:
-    10px 0 0;
+/* =========================================================
+   FORM STATUS
+========================================================= */
 
-  color: #177245;
+.form-message {
+  box-sizing: border-box;
+
+  width: 100%;
+
+  margin-top: 14px;
+  padding: 13px 15px;
+
+  border-radius: 10px;
 
   font-size: 13px;
-  font-weight: 700;
+  line-height: 1.5;
 }
 
-.form-success.is-visible {
+.form-message[hidden] {
+  display: none;
+}
+
+.form-message strong {
   display: block;
+
+  margin-bottom: 3px;
+}
+
+.form-message span {
+  display: block;
+}
+
+.form-message-success {
+  border:
+    1px solid
+    rgba(23, 114, 69, 0.20);
+
+  background:
+    rgba(23, 114, 69, 0.07);
+
+  color: #177245;
+}
+
+.form-message-error {
+  border:
+    1px solid
+    rgba(229, 35, 41, 0.20);
+
+  background:
+    rgba(229, 35, 41, 0.06);
+
+  color: #b91f25;
+}
+
+#lead-submit:disabled {
+  opacity: 0.7;
+
+  cursor: wait;
+
+  pointer-events: none;
+
+  transform: none;
 }
 
 
@@ -1574,7 +1697,8 @@ fieldset.form-full {
     gap: 9px;
   }
 
-  .hero-actions .button {
+  .hero-actions .button,
+  .hero-actions .cv-button {
     width: 100%;
 
     min-height: 50px;
@@ -1650,6 +1774,15 @@ fieldset.form-full {
   }
 
 
+  /* CHECK CAR IMAGE */
+
+  .car-photo.car-photo-geely {
+    aspect-ratio: 16 / 9;
+
+    margin-top: 26px;
+  }
+
+
   /* FORM */
 
   .lead-form {
@@ -1663,6 +1796,14 @@ fieldset.form-full {
 
   .form-full {
     grid-column: auto;
+  }
+
+  .lead-form textarea {
+    min-height: 90px;
+  }
+
+  .checkboxes {
+    gap: 7px;
   }
 
 
@@ -1689,7 +1830,10 @@ fieldset.form-full {
     display: block;
   }
 
-  .mobile-cta .button {
+  .mobile-cta .button,
+  .mobile-cta .cv-button {
+    width: 100%;
+
     box-shadow:
       0 12px 35px
       rgba(229, 35, 41, 0.3);
@@ -1740,36 +1884,4 @@ fieldset.form-full {
     transition: none;
   }
 
-}
-/* =========================================================
-   GEELY EX5 PHOTO - CHECK CAR SECTION
-========================================================= */
-
-.car-photo.car-photo-geely {
-  position: relative;
-
-  display: block;
-
-  width: 100%;
-  height: auto;
-  aspect-ratio: 12 / 5;
-
-  margin: 32px 0 0;
-
-  overflow: hidden;
-
-  border-radius: 18px;
-
-  background-color: #292d31;
-
-  background-image:
-    url("https://geely.am/assets/images/c9/c97eac_EX5-model-selection---PC.jpg");
-
-  background-repeat: no-repeat;
-
-  background-position: center center;
-
-  background-size: cover;
-
-  box-shadow: none;
 }

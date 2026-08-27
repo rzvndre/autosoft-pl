@@ -41,7 +41,6 @@
 
   <!-- =====================================================
        BUTTON / NAVIGATION FIX
-       Оставляем здесь, чтобы не ломать существующий style.css
   ====================================================== -->
 
   <style>
@@ -135,7 +134,7 @@
 
 
     /* =====================================================
-       NEW CTA BUTTON
+       CTA BUTTON
     ====================================================== */
 
     .cv-button {
@@ -298,6 +297,121 @@
 
 
     /* =====================================================
+       COMMENT FIELD
+    ====================================================== */
+
+    .lead-form textarea {
+      box-sizing: border-box;
+
+      display: block;
+
+      width: 100%;
+      min-height: 62px;
+
+      padding: 17px 18px;
+
+      border: 1px solid #e1e3e6;
+      border-radius: 12px;
+
+      outline: none;
+
+      background: #fafafa;
+      color: #16191c;
+
+      font-family: inherit;
+      font-size: 15px;
+      line-height: 1.4;
+
+      resize: vertical;
+
+      transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .lead-form textarea::placeholder {
+      color: #abadb1;
+    }
+
+
+    .lead-form textarea:focus {
+      border-color: #ef233c;
+
+      background: #ffffff;
+
+      box-shadow:
+        0 0 0 3px
+        rgba(239, 35, 60, 0.08);
+    }
+
+
+    /* =====================================================
+       FORM MESSAGES
+    ====================================================== */
+
+    .form-message {
+      box-sizing: border-box;
+
+      width: 100%;
+
+      margin-top: 16px;
+      padding: 14px 16px;
+
+      border-radius: 10px;
+
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+
+    .form-message[hidden] {
+      display: none;
+    }
+
+
+    .form-message strong {
+      display: block;
+
+      margin-bottom: 3px;
+    }
+
+
+    .form-message-success {
+      border:
+        1px solid
+        rgba(38, 166, 91, 0.22);
+
+      background:
+        rgba(38, 166, 91, 0.08);
+
+      color: #167743;
+    }
+
+
+    .form-message-error {
+      border:
+        1px solid
+        rgba(239, 35, 60, 0.22);
+
+      background:
+        rgba(239, 35, 60, 0.07);
+
+      color: #bd1428;
+    }
+
+
+    #lead-submit:disabled {
+      opacity: 0.72;
+
+      cursor: wait;
+
+      pointer-events: none;
+    }
+
+
+    /* =====================================================
        FOOTER BUTTON
     ====================================================== */
 
@@ -381,6 +495,11 @@
 
       .mobile-cta .cv-button {
         width: 100%;
+      }
+
+
+      .lead-form textarea {
+        min-height: 90px;
       }
 
     }
@@ -579,8 +698,6 @@
           <div class="hero-actions">
 
 
-            <!-- PRIMARY CTA -->
-
             <button
               class="cv-button"
               type="button"
@@ -589,8 +706,6 @@
               Sprawdź swój samochód →
             </button>
 
-
-            <!-- SECONDARY CTA -->
 
             <button
               class="cv-button cv-button-secondary"
@@ -610,8 +725,6 @@
 
           <div class="hero-info">
 
-
-            <!-- BRANDS -->
 
             <div
               class="brand-chips hero-brand-chips"
@@ -636,8 +749,6 @@
 
             </div>
 
-
-            <!-- CURRENT MODEL -->
 
             <div class="hero-current-model">
 
@@ -674,8 +785,6 @@
       >
 
 
-        <!-- L7 -->
-
         <button
           class="hero-carousel-dot is-active"
           type="button"
@@ -685,8 +794,6 @@
         ></button>
 
 
-        <!-- L9 -->
-
         <button
           class="hero-carousel-dot"
           type="button"
@@ -695,8 +802,6 @@
           aria-pressed="false"
         ></button>
 
-
-        <!-- GEELY -->
 
         <button
           class="hero-carousel-dot"
@@ -728,21 +833,15 @@
       <div class="container">
 
 
-        <!-- SECTION LABEL -->
-
         <p class="section-label">
           Problem → rozwiązanie
         </p>
 
 
-        <!-- SECTION TITLE -->
-
         <h2>
           Kupiłeś samochód z Chin?
         </h2>
 
-
-        <!-- SECTION DESCRIPTION -->
 
         <p class="section-intro">
 
@@ -752,8 +851,6 @@
 
         </p>
 
-
-        <!-- PROBLEMS GRID -->
 
         <div class="problem-grid">
 
@@ -884,21 +981,15 @@
       <div class="container">
 
 
-        <!-- SECTION LABEL -->
-
         <p class="section-label">
           Usługi
         </p>
 
 
-        <!-- TITLE -->
-
         <h2>
           Co możemy zrobić?
         </h2>
 
-
-        <!-- INTRO -->
 
         <p class="section-intro">
 
@@ -909,8 +1000,6 @@
 
         </p>
 
-
-        <!-- SERVICES -->
 
         <div class="services-grid">
 
@@ -1161,27 +1250,21 @@
         <div>
 
 
-          <!-- LABEL -->
-
           <p class="section-label">
             Sprawdź kompatybilność
           </p>
 
-
-          <!-- TITLE -->
 
           <h2>
             Sprawdź możliwości swojego auta.
           </h2>
 
 
-          <!-- DESCRIPTION -->
-
           <p class="section-intro">
 
-            Podaj model, rok i wersję systemu.
+            Podaj model, rok i interesujące Cię usługi.
 
-            Na tej podstawie można ustalić
+            Na tej podstawie sprawdzimy
             dostępny zakres konfiguracji.
 
           </p>
@@ -1189,24 +1272,40 @@
 
           <!-- CAR IMAGE -->
 
-         <figure
-  class="car-photo car-photo-geely"
-  role="img"
-  aria-label="Geely EX5"
-></figure>
+          <figure
+            class="car-photo car-photo-geely"
+            role="img"
+            aria-label="Geely EX5"
+          ></figure>
 
 
         </div>
 
 
         <!-- =============================================
-             FORM
+             REAL FORMSPREE FORM
         ============================================== -->
 
         <form
           class="lead-form"
           id="lead-form"
+          action="https://formspree.io/f/meaqjpez"
+          method="POST"
         >
+
+
+          <input
+            type="hidden"
+            name="subject"
+            value="Nowe zgłoszenie CVSTechPL"
+          >
+
+
+          <input
+            type="hidden"
+            name="source"
+            value="CVSTechPL website"
+          >
 
 
           <div class="form-grid">
@@ -1307,22 +1406,22 @@
 
 
             <!-- =========================================
-                 SYSTEM VERSION
+                 COMMENT
             ========================================== -->
 
             <label>
 
 
               <span>
-                Komentarze
+                KOMENTARZ
               </span>
 
 
-              <input
-                type="text"
-                name="system-version"
-                placeholder="Komentarze"
-              >
+              <textarea
+                name="message"
+                placeholder="Dodatkowe informacje..."
+                rows="3"
+              ></textarea>
 
 
             </label>
@@ -1343,14 +1442,12 @@
               <div class="checkboxes">
 
 
-                <!-- LANGUAGE -->
-
                 <label>
 
                   <input
                     type="checkbox"
                     name="services"
-                    value="language"
+                    value="Język"
                   >
 
                   Język
@@ -1358,14 +1455,12 @@
                 </label>
 
 
-                <!-- ADB -->
-
                 <label>
 
                   <input
                     type="checkbox"
                     name="services"
-                    value="adb"
+                    value="ADB"
                   >
 
                   ADB
@@ -1373,14 +1468,12 @@
                 </label>
 
 
-                <!-- APPLICATIONS -->
-
                 <label>
 
                   <input
                     type="checkbox"
                     name="services"
-                    value="apps"
+                    value="Aplikacje"
                   >
 
                   Aplikacje
@@ -1388,14 +1481,12 @@
                 </label>
 
 
-                <!-- UPDATE -->
-
                 <label>
 
                   <input
                     type="checkbox"
                     name="services"
-                    value="update"
+                    value="Aktualizacja"
                   >
 
                   Aktualizacja
@@ -1403,14 +1494,12 @@
                 </label>
 
 
-                <!-- OTHER -->
-
                 <label>
 
                   <input
                     type="checkbox"
                     name="services"
-                    value="other"
+                    value="Inne"
                   >
 
                   Inne
@@ -1461,6 +1550,7 @@
               <input
                 type="email"
                 name="email"
+                required
                 placeholder="email@example.com"
               >
 
@@ -1477,6 +1567,7 @@
 
               <button
                 class="button button-full"
+                id="lead-submit"
                 type="submit"
               >
                 Sprawdź mój samochód →
@@ -1485,24 +1576,54 @@
 
               <p class="form-note">
 
-                Wersja demonstracyjna formularza.
+                Wyślij dane samochodu.
 
-                Podłącz docelowy odbiornik danych
-                przed publikacją.
+                Skontaktujemy się z Tobą
+                w sprawie dostępnych możliwości.
 
               </p>
 
 
-              <p
-                class="form-success"
+              <!-- SUCCESS -->
+
+              <div
+                class="form-message form-message-success"
                 id="form-success"
                 role="status"
+                aria-live="polite"
                 hidden
               >
 
-                ✓ Formularz został poprawnie sprawdzony.
+                <strong>
+                  ✓ Zgłoszenie zostało wysłane!
+                </strong>
 
-              </p>
+                <span>
+                  Dziękujemy. Skontaktujemy się z Tobą.
+                </span>
+
+              </div>
+
+
+              <!-- ERROR -->
+
+              <div
+                class="form-message form-message-error"
+                id="form-error"
+                role="alert"
+                aria-live="assertive"
+                hidden
+              >
+
+                <strong>
+                  Nie udało się wysłać zgłoszenia.
+                </strong>
+
+                <span>
+                  Spróbuj ponownie za chwilę.
+                </span>
+
+              </div>
 
 
             </div>
@@ -1533,32 +1654,24 @@
       <div class="container">
 
 
-        <!-- LABEL -->
-
         <p class="section-label">
           Prosty proces
         </p>
 
-
-        <!-- TITLE -->
 
         <h2>
           Jak to działa?
         </h2>
 
 
-        <!-- DESCRIPTION -->
-
         <p class="section-intro">
 
           Najpierw identyfikujemy samochód
-          i wersję systemu, a dopiero potem
+          i jego konfigurację, a dopiero potem
           ustalamy możliwy zakres prac.
 
         </p>
 
-
-        <!-- STEPS -->
 
         <div class="steps">
 
@@ -1584,7 +1697,7 @@
 
 
             <p>
-              Marka, model, rok i wersja systemu.
+              Marka, model, rok i dodatkowe informacje.
             </p>
 
 
@@ -1725,8 +1838,6 @@
     <div class="container footer-inner">
 
 
-      <!-- BRAND -->
-
       <button
         class="brand brand-button"
         type="button"
@@ -1748,14 +1859,10 @@
       </button>
 
 
-      <!-- COPYRIGHT -->
-
       <small>
         © 2026 CVSTechPL.
       </small>
 
-
-      <!-- FOOTER CTA -->
 
       <button
         class="footer-button"
@@ -1799,7 +1906,7 @@
 
 
   <!-- =====================================================
-       NAVIGATION FIX
+       NAVIGATION + REAL FORMSPREE SUBMISSION
   ====================================================== -->
 
   <script>
@@ -1808,13 +1915,6 @@
      * =====================================================
      * SMOOTH NAVIGATION
      * =====================================================
-     *
-     * Każdy przycisk posiada atrybut:
-     *
-     * data-scroll-target="..."
-     *
-     * Kliknięcie przewija stronę do elementu
-     * posiadającego odpowiednie ID.
      */
 
     const navigationButtons =
@@ -1839,9 +1939,7 @@
 
 
             if (!targetId) {
-
               return;
-
             }
 
 
@@ -1859,7 +1957,6 @@
               );
 
               return;
-
             }
 
 
@@ -1879,18 +1976,19 @@
 
     /*
      * =====================================================
-     * FORM DEMO
+     * REAL FORMSPREE FORM
      * =====================================================
-     *
-     * Formularz pozostaje demonstracyjny.
-     *
-     * Zapobiegamy przeładowaniu strony podczas
-     * testowania formularza lokalnie.
      */
 
     const leadForm =
       document.getElementById(
         "lead-form"
+      );
+
+
+    const leadSubmitButton =
+      document.getElementById(
+        "lead-submit"
       );
 
 
@@ -1900,13 +1998,23 @@
       );
 
 
+    const formError =
+      document.getElementById(
+        "form-error"
+      );
+
+
     if (leadForm) {
 
 
       leadForm.addEventListener(
         "submit",
-        function (event) {
+        async function (event) {
 
+
+          /*
+           * Stop normal redirect
+           */
 
           event.preventDefault();
 
@@ -1920,7 +2028,6 @@
 
             leadForm.reportValidity();
 
-
             return;
 
 
@@ -1928,14 +2035,200 @@
 
 
           /*
-           * Show demo success message
+           * Hide old status messages
            */
 
           if (formSuccess) {
+            formSuccess.hidden = true;
+          }
 
 
-            formSuccess.hidden =
-              false;
+          if (formError) {
+            formError.hidden = true;
+          }
+
+
+          /*
+           * Save button text
+           */
+
+          const originalButtonText =
+            leadSubmitButton
+              ? leadSubmitButton.textContent.trim()
+              : "Sprawdź mój samochód →";
+
+
+          /*
+           * Loading state
+           */
+
+          if (leadSubmitButton) {
+
+
+            leadSubmitButton.disabled =
+              true;
+
+
+            leadSubmitButton.textContent =
+              "Wysyłanie...";
+
+
+          }
+
+
+          /*
+           * Collect form fields
+           */
+
+          const formData =
+            new FormData(
+              leadForm
+            );
+
+
+          try {
+
+
+            /*
+             * Send data to Formspree
+             */
+
+            const response =
+              await fetch(
+                leadForm.action,
+                {
+
+                  method:
+                    leadForm.method,
+
+                  body:
+                    formData,
+
+                  headers: {
+
+                    "Accept":
+                      "application/json"
+
+                  }
+
+                }
+              );
+
+
+            /*
+             * Success
+             */
+
+            if (response.ok) {
+
+
+              leadForm.reset();
+
+
+              if (formError) {
+
+                formError.hidden =
+                  true;
+
+              }
+
+
+              if (formSuccess) {
+
+                formSuccess.hidden =
+                  false;
+
+              }
+
+
+              if (leadSubmitButton) {
+
+
+                leadSubmitButton.textContent =
+                  "Zgłoszenie wysłane ✓";
+
+
+              }
+
+
+              window.setTimeout(
+                function () {
+
+
+                  if (leadSubmitButton) {
+
+
+                    leadSubmitButton.disabled =
+                      false;
+
+
+                    leadSubmitButton.textContent =
+                      originalButtonText;
+
+
+                  }
+
+
+                },
+                4000
+              );
+
+
+              return;
+
+
+            }
+
+
+            /*
+             * Server rejected submission
+             */
+
+            throw new Error(
+              "Form submission failed"
+            );
+
+
+          }
+
+
+          catch (error) {
+
+
+            console.error(
+              "CVSTechPL form error:",
+              error
+            );
+
+
+            if (formSuccess) {
+
+              formSuccess.hidden =
+                true;
+
+            }
+
+
+            if (formError) {
+
+              formError.hidden =
+                false;
+
+            }
+
+
+            if (leadSubmitButton) {
+
+
+              leadSubmitButton.disabled =
+                false;
+
+
+              leadSubmitButton.textContent =
+                originalButtonText;
+
+
+            }
 
 
           }
