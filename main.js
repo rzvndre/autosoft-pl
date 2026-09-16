@@ -861,4 +861,4 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
 });
-document.getElementById("policy-link").innerHTML = 'policy/';
+// document.getElementById("policy-link").innerHTML = 'policy/';
